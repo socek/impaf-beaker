@@ -11,6 +11,6 @@ class BeakerApplication(Application):
 
 class BeakerRequestable(Requestable):
 
-    def feed_request(self, request):
-        super().feed_request(request)
+    def _unpack_request(self, request):
+        super()._unpack_request(request)
         self.session = request.session
